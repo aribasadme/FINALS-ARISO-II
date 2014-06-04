@@ -1,0 +1,24 @@
+#include <unistd.h>
+#include <signal.h>
+
+void barajar(int num, int *vector);
+void handler(int alguno){
+	printf("Soy %d y me han matado\n");
+	exit(-1);
+}
+
+main(){
+	int pids[20], fd[2];
+	int i, leido, muerto;
+	sigset_t set;
+
+	pipe(fd);
+	for (i=0; i<20; i++){
+		pids[i] = fork();
+		if (pid[i] == 0)		// Hijos
+		{
+			signal(SIGUSR1, handler);
+		{	
+	}
+
+}
